@@ -1,0 +1,138 @@
+spam = input()
+
+
+# This program says hello and asks for my name
+print ('Hello World!')
+print ('What is your name?')
+
+myName = input()
+print ('It is good to meet you, ' + myName)
+print ('The length of your name is:')
+print (len(myName))
+print ('What is your age?')
+myAge = input()
+print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+
+'spam' + 'spamspam'
+
+spam = 
+if spam == 1:
+    print ('Hello')
+elif spam == 2:
+    print ('Howdy')
+else:
+    print ('Greetings!')
+
+doctor = 0
+for doctor in range(10):
+    doctor = doctor + 1
+    print (doctor)
+    
+
+doctor = 0
+while doctor < 10:
+    doctor = doctor + 1
+    print (doctor)
+
+import random
+def getAnswer(answerNumber):
+    if answerNumber == 1:
+        return 'It is certain'
+    elif answerNumber == 2:
+        return 'It is decidedly so'
+    elif answerNumber == 3:
+        return 'Yes'
+    elif answerNumber == 4:
+        return 'Reply hazy try again'
+    elif answerNumber == 5:
+        return 'Ask again later'
+    elif answerNumber == 6:
+        return 'Concentrate and ask again'
+    elif answerNumber == 7:
+        return 'My reply is no'
+    elif answerNumber == 8:
+        return 'Outlook not so good'
+    elif answerNumber == 9:
+        return 'Very doubtful'
+r = random.randint(1,9)
+fortune = getAnswer(r)
+print (fortune)
+
+def spam():
+    eggs1 = 'spam local'
+    print(eggs1) # prints 'spam local' why isn't spam local printed?
+def bacon():
+    eggs = 'bacon local'
+    print(eggs) # prints 'bacon local'
+    spam()
+    print(eggs) # prints 'bacon local'
+
+eggs = 'global'
+bacon()
+print(eggs) # prints 'global'
+
+# This is a guess the number game.
+import random
+secretNumber = random.randint(1, 20)
+print('I am thinking of a number between 1 and 20.')
+
+# Ask the player to guess 6 times.
+for guessesTaken in range(1, 7):
+    print('Take a guess.')
+    guess = int(input())
+
+    if guess < secretNumber:
+        print('Your guess is too low.')
+    elif guess > secretNumber:
+        print('Your guess is too high.')
+    else:
+        break    # This condition is the correct guess!
+
+if guess == secretNumber:
+    print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
+else:
+    print('Nope. The number I was thinking of was ' + str(secretNumber))
+
+
+def collatz(number):
+    if number % 2 == 0:
+        return (number // 2)
+    if number % 2 == 1:
+        return (3 * number + 1)
+print ('Enter Number')
+try:
+    number = int(input())
+    while number != 1:
+        number = collatz(number)
+        print (number)
+except ValueError:
+    print('Error: You must write an integer')
+    
+
+import random
+messages = ['It is certain','It is decidedly so','Yes definitely','Reply hazy try again','Ask again later','Concentrate and ask again','My reply is no','Outlook not so good','Very doubtful']
+print (messages[random.randint(0, len(messages)-1)])
+
+spam = ['a','b','c','d']
+spam[int(int('3'*2)//11)]
+
+spam = ['apples','bananas','tofu','cats']
+
+def grammarList(fruits):
+    for fruit in range(len(spam)-1):
+        print (spam[fruit], end=', ')
+    print ('and ' + spam[-1])
+
+grammarList(spam)
+
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+for value in range(len(grid)):
+    print (grid[value][0], end='')    
